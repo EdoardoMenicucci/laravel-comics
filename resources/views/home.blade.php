@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HomePage</h1>
+    <h1>HomePage </h1><form action="about"><button type="submit">Go About</button></form>
     <ul>
     @foreach ($data as $element)
             <li><h3>{{ $element['title'] }}</h3></li>
             <p>{{$element['description']}}</p>
+            <img src="{{$element['thumb']}}" alt="">
             <p>{{$element['price']}}</p>
             <hr>
     @endforeach

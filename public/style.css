@@ -9,10 +9,19 @@ body{
     background-color: #222;
 }
 
+h3{
+    margin-left: 1rem;
+}
+
 p{
     margin: 1rem;
 }
 
 li{
     margin-top: 1rem;
+}
+
+img{
+    max-width: 303px;
+    margin-left: 1rem;
 }

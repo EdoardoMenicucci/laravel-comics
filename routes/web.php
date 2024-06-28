@@ -23,7 +23,7 @@ Route::get('/', function () {
     ];*/
 
     $data = config("store");
-
+    // DO UN NOME ALL'ARRAY VISTO CHE NON E' ASSOCIATIVO
     return view('home', ['data' => $data]);
 });
 
@@ -37,5 +37,18 @@ Route::get('/home', function () {
     ];*/
 
     $data = config("store");
+
     return view('home', ['data' => $data]);
+});
+
+Route::get('/about', function () {
+    $data = [
+        'developer' => [
+            'nome' => 'Edoardo',
+            'cognome' => 'Menicucci',
+            'professione' => 'WebDeveloper'
+        ]
+    ];
+
+    return view('about', $data);
 });
