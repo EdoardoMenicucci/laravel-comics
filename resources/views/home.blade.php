@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HomePage</h1>
+    <h1>HomePage di {{$developer['nome']}}</h1>
+    <ul>
+        @foreach ($developer as $item)
+            <li>{{$item}}</li>
+        @endforeach
+    </ul>
 </body>
 </html>
