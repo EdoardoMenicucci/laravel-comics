@@ -14,22 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
+    /*$data = [
         'developer' => [
             'nome' => 'Edoardo',
             'cognome' => 'Menicucci',
             'professione' => 'WebDeveloper'
         ]
-    ];
+    ];*/
+
+    $data = config("store");
 
     return view('home', $data);
 });
 
 Route::get('/home', function () {
-    $data = [
-        'nome' => 'Edoardo',
-        'cognome' => 'Menicucci',
-        'professione' => 'WebDeveloper'
-    ];
+    /*$data = [
+        'developer' => [
+            'nome' => 'Edoardo',
+            'cognome' => 'Menicucci',
+            'professione' => 'WebDeveloper'
+        ]
+    ];*/
+
+    $data = config("store");
     return view('home', $data);
 });
