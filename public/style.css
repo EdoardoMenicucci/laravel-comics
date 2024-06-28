@@ -8,3 +8,11 @@ body{
     color: white;
     background-color: #222;
 }
+
+p{
+    margin: 1rem;
+}
+
+li{
+    margin-top: 1rem;
+}

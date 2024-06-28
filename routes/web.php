@@ -24,7 +24,7 @@ Route::get('/', function () {
 
     $data = config("store");
 
-    return view('home', $data);
+    return view('home', ['data' => $data]);
 });
 
 Route::get('/home', function () {
@@ -37,5 +37,5 @@ Route::get('/home', function () {
     ];*/
 
     $data = config("store");
-    return view('home', $data);
+    return view('home', ['data' => $data]);
 });
