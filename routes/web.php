@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\Annotation\Route as AnnotationRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +41,7 @@ Route::get('/home', function () {
     $data = config("store");
 
     return view('home', ['data' => $data]);
-});
+})->name('home');
 
 Route::get('/about', function () {
     $data = [
@@ -51,4 +53,14 @@ Route::get('/about', function () {
     ];
 
     return view('about', $data);
-});
+})->name('about');;
+
+Route::get('/comics/{index}', function ($index) {
+    $data = config("store");
+    if (array_key_exists($index, $data)) {
+        $fumetto = ['fumetto' => $data[$index]];
+        return view('fumettoSingolo', $fumetto);
+    } else {
+        return view('home', ['data' => $data]);
+    }
+})->name('fumetto');

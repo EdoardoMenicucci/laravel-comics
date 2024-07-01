@@ -1,0 +1,1 @@
+<header><div><h1>{{ Route::currentRouteName() }}</h1></div><div><a href="{{ route("about") }}">About</a><a href="{{ route("home") }}">Home</a></div></header>
